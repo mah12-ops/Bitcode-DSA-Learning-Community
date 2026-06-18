@@ -1,26 +1,26 @@
-// package main
+package main
 
-// import "sort"
+import "sort"
 
-// func groupAnagrams(strs []string) [][]string {
-// 	groups := make(map[string][]string)
+func groupAnagrams(strs []string) [][]string {
+	groups := make(map[string][]string)
 
-// 	for _, str := range strs {
-// 		chars := []byte(str)
-// 		sort.Slice(chars, func(i, j int) bool {
-// 			return chars[i] < chars[j]
-// 		})
+	for _, str := range strs {
+		chars := []byte(str)
+		sort.Slice(chars, func(i, j int) bool {
+			return chars[i] < chars[j]
+		})
 
-// 		key := string(chars)
+		key := string(chars)
 
-// 		groups[key] = append(groups[key], str)
-// 	}
+		groups[key] = append(groups[key], str)
+	}
 
-// 	result := [][]string{}
+	result := [][]string{}
 
-// 	for _, group := range groups {
-// 		result = append(result, group)
-// 	}
+	for _, group := range groups {
+		result = append(result, group)
+	}
 
-// 	return result
-// }
+	return result
+}
