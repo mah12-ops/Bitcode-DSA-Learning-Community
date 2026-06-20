@@ -1,32 +1,32 @@
-package main
+// package main
 
-func twoSum(nums []int, target int) []int {
-	for i := 0; i < len(nums); i++ {
-		for j := i + 1; j < len(nums); j++ {
-			if nums[i]+nums[j] == target {
-				return []int{i, j}
-			}
-		}
-	}
-	return nil
-}
+// func twoSum(nums []int, target int) []int {
+// 	for i := 0; i < len(nums); i++ {
+// 		for j := i + 1; j < len(nums); j++ {
+// 			if nums[i]+nums[j] == target {
+// 				return []int{i, j}
+// 			}
+// 		}
+// 	}
+// 	return nil
+// }
 
-//   Complexity :  Brute Force (O(n²))
+// //   Complexity :  Brute Force (O(n²))
 
-func twoSumOptimal(nums []int, target int) []int {
-	seen := make(map[int]int)
+// func twoSumOptimal(nums []int, target int) []int {
+// 	seen := make(map[int]int)
 
-	for i, num := range nums {
-		complement := target - num
+// 	for i, num := range nums {
+// 		complement := target - num
 
-		if idx, exists := seen[complement]; exists {
-			return []int{idx, i}
-		}
+// 		if idx, exists := seen[complement]; exists {
+// 			return []int{idx, i}
+// 		}
 
-		seen[num] = i
-	}
+// 		seen[num] = i
+// 	}
 
-	return nil
-}
+// 	return nil
+// }
 
-// optimal solution using HashMap (O(n))
+// // optimal solution using HashMap (O(n))
